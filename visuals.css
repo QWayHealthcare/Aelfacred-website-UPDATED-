@@ -1,0 +1,166 @@
+/* Context-specific illustrations from Advanced_Website_Animation_Styling_Effects.txt.
+   Five unique compositions. Text is stationary; decorative layers carry motion.
+   Effects are opt-in through .motion-ready and pause when the section is offscreen. */
+.section-visual { position:relative; isolation:isolate; min-width:0; width:100%; height:445px; margin:0; overflow:hidden; }
+.section-visual figcaption { position:absolute; bottom:0; left:10px; right:10px; text-align:center; font-size:8px; letter-spacing:.13em; line-height:1.7; color:#89a9d7; }
+.section-visual .visual-overline { display:block; font-size:8px; font-weight:500; letter-spacing:.16em; color:#91b7ec; line-height:1.7; }
+.visual-decoration { pointer-events:none; }
+
+/* PLATFORM / 12 moving mesh, 28 mask reveal, 1 vertical floating behind the file. */
+.dossier-mesh { position:absolute; inset:-15% -20%; z-index:-1; background-image:linear-gradient(rgba(108,158,231,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(108,158,231,.1) 1px,transparent 1px); background-size:36px 36px; transform:perspective(600px) rotateX(48deg) rotateZ(-15deg) translateY(25px); mask-image:radial-gradient(ellipse,#000,transparent 66%); }
+.dossier-stack { position:absolute; top:48px; left:8%; width:83%; max-width:420px; }
+.dossier-sheet { position:absolute; inset:0; border-radius:16px; border:1px solid #385d96; background:linear-gradient(135deg,rgba(29,63,110,.65),rgba(13,30,53,.8)); }
+.sheet-back { transform:translate(22px,-26px) rotate(7deg); opacity:.4; }
+.sheet-mid { transform:translate(10px,-12px) rotate(3deg); opacity:.7; }
+.dossier-file { position:relative; padding:24px; border:1px solid #658bbd; border-radius:16px; background:linear-gradient(140deg,#1c3555,#0d1c32 80%); box-shadow:0 24px 55px rgba(0,0,0,.24); }
+.dossier-heading { display:flex; align-items:center; justify-content:space-between; margin-bottom:23px; }
+.dossier-mark { color:#aacfff; font-size:22px; line-height:1; }
+.dossier-profile { display:flex; align-items:center; gap:15px; margin-bottom:24px; }
+.dossier-profile>svg { width:46px; height:46px; border:1px solid #5378a9; background:#1f3e66; border-radius:13px; padding:8px; stroke:#afcefb; stroke-width:1.5; flex-shrink:0; }
+.dossier-profile strong { display:block; font-size:18px; line-height:1.3; font-weight:500; letter-spacing:-.02em; }
+.dossier-profile div>span { display:block; font-size:9px; color:#9bb8df; margin-top:7px; }
+.dossier-entry { display:flex; align-items:center; gap:13px; border-top:1px solid #304b70; padding:16px 0; }
+.dossier-entry>span { font-size:8px; color:#779ccb; }
+.dossier-entry>strong { font-size:12px; font-weight:400; color:#d1e0f6; flex:1; }
+.dossier-entry>i { width:48px; height:4px; border-radius:4px; background:linear-gradient(90deg,#6fa7ff,#2b527f); }
+.dossier-entry:nth-of-type(4)>i { width:34px; }.dossier-entry:nth-of-type(5)>i { width:42px; }
+.dossier-footer { display:flex; align-items:center; gap:8px; padding-top:15px; border-top:1px solid #304b70; font-size:8px; color:#94b1d8; }
+.dossier-check { display:grid; place-items:center; border-radius:50%; width:17px; height:17px; border:1px solid #426a9f; color:#a8ccff; font-size:10px; flex-shrink:0; }
+.dossier-footer>svg { width:57px; height:20px; margin-left:auto; stroke:#8ebaff; stroke-width:1.3; }
+.motion-ready .dossier-file { clip-path:inset(0 0 100% 0 round 16px); transition:clip-path 1s cubic-bezier(.2,.7,.2,1); }
+.motion-ready .dossier-visual.is-visible .dossier-file { clip-path:inset(0 round 16px); }
+.motion-ready .dossier-mesh { animation:dossier-grid-drift 16s ease-in-out infinite alternate; animation-play-state:paused; }
+.motion-ready .sheet-back { animation:dossier-background-float 9s ease-in-out infinite; animation-play-state:paused; }
+.motion-ready .in-view .dossier-mesh,.motion-ready .in-view .sheet-back { animation-play-state:running; }
+
+/* SERVICES / 23 SVG path drawing and 21 traveling light streak. No orbit or hub. */
+.route-heading { padding:18px 14px 0; }
+.route-heading>strong { display:block; color:#eff5ff; font-weight:500; font-size:31px; line-height:1.17; letter-spacing:-.035em; margin-top:17px; }
+.route-heading em { font-style:normal; color:#92b9f0; }
+.route-map { position:absolute; left:0; right:0; top:140px; height:235px; }
+.route-paths { position:absolute; inset:0; width:100%; height:100%; }
+.route-base { stroke:#3d5c85; stroke-width:1.5; }
+.route-draw { stroke:#77adff; stroke-width:2; }
+.route-contour { stroke:#233d61; stroke-width:1; }
+.route-streak { stroke:#d3e5ff; stroke-width:3; stroke-linecap:round; stroke-dasharray:3 97; }
+.route-stop { position:absolute; display:flex; align-items:center; gap:9px; }
+.route-stop>span { display:grid; place-items:center; border:1px solid #678ab8; border-radius:50%; width:32px; height:32px; background:#173153; color:#bed7ff; font-size:9px; box-shadow:0 0 0 6px #0b1829; }
+.route-stop>strong { font-size:11px; font-weight:500; padding:5px 0; color:#cee0f8; }
+.stop-collect { left:5%; top:70%; }.stop-verify { left:29%; top:43%; }.stop-enroll { left:58%; top:22%; }.stop-monitor { right:3%; top:0; }
+.route-legend { position:absolute; bottom:33px; left:14px; right:14px; display:flex; align-items:center; gap:14px; color:#8aabd6; font-size:10px; }
+.route-legend>i { height:1px; flex:1; background:linear-gradient(90deg,#517caf,transparent); }
+.motion-ready .route-draw { stroke-dasharray:1; stroke-dashoffset:1; transition:stroke-dashoffset 1.6s ease; }
+.motion-ready .service-route-visual.is-visible .route-draw { stroke-dashoffset:0; }
+.motion-ready .route-streak { animation:service-streak-travel 7s linear infinite; animation-play-state:paused; }
+.motion-ready .in-view .route-streak { animation-play-state:running; }
+
+/* WHO WE SERVE / isometric healthcare buildings, 27 staggered geometric reveal. */
+.campus-visual { height:445px; }
+.campus-glow { position:absolute; inset:18% -10% 8%; background:radial-gradient(ellipse at center,rgba(49,100,187,.23),transparent 65%); z-index:-1; }
+.campus-heading { padding:18px 8px 0; }
+.campus-heading>strong { display:block; font-size:27px; font-weight:500; line-height:1.22; letter-spacing:-.025em; margin-top:17px; }
+.campus-heading em { font-style:normal; color:#8eb8f1; }
+.campus-skyline { position:absolute; top:140px; left:0; right:0; width:100%; height:247px; overflow:visible; }
+.campus-ground { stroke:#2d496f; stroke-width:1; }
+.building-front { fill:#183455; stroke:#6993c9; stroke-width:1.3; }
+.building-side { fill:#0f223b; stroke:#41618e; stroke-width:1.3; }
+.building-roof { fill:#23496f; stroke:#739dce; stroke-width:1.3; }
+.building-window { fill:#547dad; fill-opacity:.7; }
+.building-cross { fill:#afd0ff; }
+.campus-signal { stroke:#638ec9; stroke-width:1; }
+.campus-labels { position:absolute; left:7%; right:7%; bottom:32px; display:flex; justify-content:space-between; gap:10px; color:#a1bce2; font-size:9px; }
+.motion-ready .campus-building { opacity:0; transform:translateY(15px); transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1); }
+.motion-ready .hospital-building { transition-delay:.15s; }.motion-ready .center-building { transition-delay:.3s; }
+.motion-ready .campus-visual.is-visible .campus-building { opacity:1; transform:translateY(0); }
+.motion-ready .campus-signal { stroke-dasharray:1; stroke-dashoffset:1; transition:stroke-dashoffset 1.6s .4s; }
+.motion-ready .campus-visual.is-visible .campus-signal { stroke-dashoffset:0; }
+
+/* ABOUT HERO / 13 gradient waves and 20 spotlight sweep behind a stationary logo. */
+.identity-visual { border-left:1px solid #284265; height:435px; }
+.identity-waves { position:absolute; inset:0; z-index:-1; overflow:hidden; }
+.identity-waves>i { position:absolute; width:110%; height:65%; left:10%; top:12%; border-radius:50%; background:radial-gradient(ellipse,rgba(72,126,219,.15),transparent 66%); transform:rotate(-30deg); }
+.identity-waves>i:nth-child(2) { top:38%; left:-30%; opacity:.5; transform:rotate(35deg); }
+.identity-waves>i:nth-child(3) { top:0; left:0; width:26%; height:100%; background:linear-gradient(90deg,transparent,rgba(112,162,242,.09),transparent); border-radius:0; transform:translateX(-150%) skewX(-25deg); }
+.identity-lockup { position:relative; padding:37px 32px 0; }
+.identity-lockup>img { width:min(245px,75%); height:auto; margin-top:35px; margin-bottom:29px; filter:drop-shadow(0 10px 23px rgba(0,0,0,.15)); }
+.identity-rule { display:block; width:52px; height:1px; background:#7aa5dd; margin-bottom:22px; }
+.identity-lockup>strong { display:block; font-size:30px; font-weight:400; letter-spacing:-.035em; line-height:1.2; color:#d9e6f9; }
+.identity-lockup em { color:#8bb7f8; font-style:normal; }
+.identity-values { position:absolute; left:32px; right:16px; bottom:41px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+.identity-values>span { display:flex; align-items:center; gap:9px; color:#9db9df; font-size:10px; }
+.identity-values i { width:17px; height:2px; background:linear-gradient(90deg,#7faff6,#294973); }
+.motion-ready .identity-waves>i:first-child { animation:identity-wave-drift 16s ease-in-out infinite alternate; animation-play-state:paused; }
+.motion-ready .identity-waves>i:nth-child(3) { animation:identity-light-sweep 12s ease-in-out infinite; animation-play-state:paused; }
+.motion-ready .in-view .identity-waves>i { animation-play-state:running; }
+
+/* ABOUT SOFTWARE / a typographic capability index, 26 slide-in + 37 border tracing. */
+.capability-visual { height:460px; padding:21px 24px 44px; background:linear-gradient(120deg,rgba(24,45,76,.55),rgba(8,20,36,.7)); border:1px solid #345276; border-radius:3px 22px 3px 22px; }
+.capability-edge { position:absolute; top:0; bottom:0; left:0; width:2px; overflow:hidden; }
+.capability-edge::after { content:''; display:block; height:100px; width:100%; background:linear-gradient(transparent,#9ec7ff,transparent); transform:translateY(0); }
+.capability-top { display:flex; justify-content:space-between; gap:18px; align-items:center; padding-bottom:20px; border-bottom:1px solid #365176; }
+.capability-top .visual-overline { font-size:7px; max-width:170px; }
+.capability-top>img { width:65px; height:auto; }
+.capability-index-row { display:flex; gap:18px; align-items:center; padding:20px 0; border-bottom:1px solid #233c5d; }
+.capability-index-number { font-size:24px; font-weight:300; line-height:1; color:#52749f; letter-spacing:-.06em; }
+.capability-index-row>div { flex:1; }
+.capability-index-row strong { display:block; color:#d6e4f8; font-size:17px; font-weight:500; letter-spacing:-.02em; }
+.capability-index-row div>span { display:block; font-size:9px; color:#93acd0; margin-top:6px; line-height:1.6; }
+.capability-index-row>svg { width:33px; height:33px; stroke:#729ad0; stroke-width:1.4; flex-shrink:0; }
+.capability-footnote { display:flex; justify-content:space-between; gap:10px; margin-top:19px; font-size:8px; color:#85a6d1; }
+.capability-visual figcaption { bottom:13px; font-size:6px; letter-spacing:.1em; }
+.motion-ready .capability-index-row { opacity:0; transform:translateX(15px); transition:opacity .65s,transform .65s cubic-bezier(.2,.7,.2,1); }
+.motion-ready .capability-index-row:nth-child(2) { transition-delay:.1s; }.motion-ready .capability-index-row:nth-child(3) { transition-delay:.2s; }.motion-ready .capability-index-row:nth-child(4) { transition-delay:.3s; }
+.motion-ready .capability-visual.is-visible .capability-index-row { opacity:1; transform:none; }
+.motion-ready .capability-edge::after { animation:capability-border-trace 9s ease-in-out infinite; animation-play-state:paused; }
+.motion-ready .in-view .capability-edge::after { animation-play-state:running; }
+
+@keyframes dossier-grid-drift { to { transform:perspective(600px) rotateX(48deg) rotateZ(-15deg) translateY(48px); } }
+@keyframes dossier-background-float { 50% { transform:translate(22px,-33px) rotate(7deg); } }
+@keyframes service-streak-travel { to { stroke-dashoffset:-100; } }
+@keyframes identity-wave-drift { to { transform:translate(-20px,10px) rotate(-20deg); opacity:.65; } }
+@keyframes identity-light-sweep { 0%,15% { transform:translateX(-180%) skewX(-25deg); opacity:0; } 35% { opacity:1; } 70%,100% { transform:translateX(600%) skewX(-25deg); opacity:0; } }
+@keyframes capability-border-trace { 0% { transform:translateY(-110px); opacity:0; } 15%,80% { opacity:1; } 100% { transform:translateY(490px); opacity:0; } }
+
+@media(max-width:1100px) {
+  .section-visual { height:425px; }
+  .dossier-stack { left:4%; width:88%; top:50px; }
+  .dossier-file { padding:21px; }.dossier-profile { gap:10px; }.dossier-profile strong { font-size:15px; }.dossier-profile div>span { font-size:8px; }
+  .dossier-profile>svg { width:39px; height:39px; }
+  .dossier-footer { font-size:7px; }.dossier-footer>svg { width:40px; }
+  .route-heading>strong { font-size:27px; }.route-map { height:230px; }.route-stop { gap:6px; }.route-stop>span { width:28px; height:28px; }.route-stop>strong { font-size:10px; }
+  .campus-heading>strong { font-size:24px; }.campus-skyline { height:235px; top:137px; }.campus-labels { bottom:32px; font-size:8px; }
+  .identity-lockup { padding:28px 23px 0; }.identity-lockup>img { width:80%; margin-top:37px; }.identity-values { left:23px; }.identity-lockup>strong { font-size:28px; }
+  .capability-visual { height:450px; padding:20px 22px 42px; }.capability-index-row { gap:13px; padding:19px 0; }
+}
+@media(max-width:720px) {
+  .section-visual { max-width:480px; margin:0 auto; height:440px; }
+  .dossier-stack { left:8%; width:82%; }
+  .dossier-profile strong { font-size:17px; }.dossier-profile div>span { font-size:9px; }.dossier-file { padding:24px; }
+  .route-heading { padding-left:15px; }.route-heading>strong { font-size:30px; }
+  .route-map { top:143px; height:230px; }.route-stop>span { width:32px; height:32px; }.route-stop>strong { font-size:11px; }
+  .campus-heading { padding-left:15px; }.campus-heading>strong { font-size:27px; }.campus-skyline { height:250px; top:143px; }.campus-labels { font-size:9px; }
+  .identity-visual { height:445px; }.identity-lockup { padding:29px 34px 0; }.identity-lockup>img { width:235px; }.identity-lockup>strong { font-size:30px; }.identity-values { left:34px; }
+  .capability-visual { height:465px; padding:23px 29px 44px; }.capability-index-row { padding:21px 0; }
+}
+@media(max-width:480px) {
+  .section-visual { height:400px; }
+  .section-visual figcaption { font-size:7px; }
+  .dossier-stack { left:5%; width:88%; top:40px; }.dossier-file { padding:19px; }
+  .dossier-heading { margin-bottom:20px; }.dossier-profile { gap:11px; margin-bottom:20px; }
+  .dossier-profile strong { font-size:15px; }.dossier-profile div>span { font-size:8px; }.dossier-profile>svg { width:37px; height:37px; }
+  .dossier-entry { padding:14px 0; }.dossier-entry>strong { font-size:11px; }.dossier-footer { font-size:7px; }.dossier-footer>svg { width:35px; }
+  .route-heading { padding:11px 6px 0; }.route-heading>strong { font-size:26px; }.route-map { top:131px; height:216px; }
+  .route-stop { gap:5px; }.route-stop>span { width:27px; height:27px; font-size:8px; }.route-stop>strong { font-size:9px; }
+  .stop-collect { left:3%; top:72%; }.stop-verify { left:28%; top:44%; }.stop-enroll { left:53%; top:24%; }.stop-monitor { right:1%; top:2%; }
+  .route-legend { left:6px; right:6px; font-size:9px; bottom:27px; }
+  .campus-heading { padding:11px 6px 0; }.campus-heading>strong { font-size:25px; }.campus-skyline { top:135px; height:225px; }.campus-labels { left:7%; right:3%; font-size:8px; bottom:28px; }
+  .identity-visual { height:410px; }.identity-lockup { padding:23px 24px 0; }.identity-lockup>img { width:210px; margin-top:29px; margin-bottom:25px; }.identity-lockup>strong { font-size:29px; }.identity-values { left:24px; bottom:36px; font-size:9px; }
+  .capability-visual { height:443px; padding:20px 20px 40px; }.capability-index-row { padding:19px 0; gap:14px; }.capability-index-row strong { font-size:16px; }.capability-index-row div>span { font-size:8px; }.capability-index-row>svg { width:28px; height:28px; }.capability-index-number { font-size:22px; }
+  .capability-top .visual-overline { font-size:6px; }.capability-top>img { width:56px; }.capability-visual figcaption { font-size:5px; bottom:12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .motion-ready .dossier-file { clip-path:none; }
+  .motion-ready :is(.campus-building,.capability-index-row) { opacity:1; transform:none; }
+  .motion-ready :is(.route-draw,.campus-signal) { stroke-dashoffset:0; }
+  .route-streak { display:none; }
+}

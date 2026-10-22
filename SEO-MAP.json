@@ -1,0 +1,179 @@
+[
+  {
+    "path": "/",
+    "title": "Healthcare Credentialing Software & Services | AelfaCred",
+    "description": "Connect provider data, credentialing, payer enrollment and ongoing monitoring with AelfaCred software and managed healthcare credentialing services.",
+    "keywords": [
+      "healthcare credentialing software",
+      "provider credentialing services",
+      "payer enrollment",
+      "AelfaCred"
+    ],
+    "sections": 6,
+    "type": "WebPage"
+  },
+  {
+    "path": "/platform/",
+    "title": "Provider Credentialing Software | AelfaCred",
+    "description": "Manage provider records, auto-fill applications, and track license expirations, CAQH attestations, signatures, and renewals with AelfaCred.",
+    "keywords": [
+      "provider credentialing software",
+      "credentialing workflow automation",
+      "CAQH attestation tracking",
+      "credential expiration software"
+    ],
+    "sections": 5,
+    "type": "WebPage"
+  },
+  {
+    "path": "/services/",
+    "title": "Provider Credentialing Services | AelfaCred",
+    "description": "Credentialing specialists handle provider applications, payer enrollment follow-up, CAQH profiles, verification, and renewals within an agreed scope.",
+    "keywords": [
+      "provider credentialing services",
+      "payer enrollment follow-up",
+      "CAQH profile support",
+      "primary source verification",
+      "recredentialing services"
+    ],
+    "sections": 5,
+    "type": "WebPage"
+  },
+  {
+    "path": "/who-we-serve/",
+    "title": "Who We Serve | AelfaCred Credentialing Software",
+    "description": "Credentialing software and support for provider groups, independent physicians, RHCs, FQHCs, surgery centers, and hospital-affiliated practices.",
+    "keywords": [
+      "medical group credentialing",
+      "hospital-affiliated practice credentialing",
+      "ASC credentialing",
+      "FQHC credentialing",
+      "independent physician credentialing"
+    ],
+    "sections": 3,
+    "type": "WebPage"
+  },
+  {
+    "path": "/resources/",
+    "title": "Credentialing Articles, Checklists & Practical Guides | AelfaCred",
+    "description": "Read practical guides on provider credentialing, payer enrollment, CAQH attestation, recredentialing, primary source verification and credentialing software.",
+    "keywords": [
+      "credentialing articles",
+      "provider credentialing guides",
+      "CAQH attestation guide",
+      "credentialing checklist"
+    ],
+    "sections": 4,
+    "type": "WebPage"
+  },
+  {
+    "path": "/about/",
+    "title": "About AelfaCred | Credentialing Software by QWay Healthcare",
+    "description": "Meet AelfaCred, QWay Healthcare’s platform for managing provider records, credentialing applications, recurring deadlines, and specialist support.",
+    "keywords": [
+      "about AelfaCred",
+      "QWay Healthcare",
+      "credentialing platform",
+      "provider records"
+    ],
+    "sections": 5,
+    "type": "WebPage"
+  },
+  {
+    "path": "/contact/",
+    "title": "Book an AelfaCred Demo | Talk to a Credentialing Expert",
+    "description": "Discuss provider credentialing software, payer enrollment and managed credentialing support. Book an AelfaCred demo around your healthcare workflow.",
+    "keywords": [
+      "AelfaCred demo",
+      "credentialing software demo",
+      "credentialing consultation"
+    ],
+    "sections": 3,
+    "type": "WebPage"
+  },
+  {
+    "path": "/resources/provider-credentialing-checklist/",
+    "title": "Provider credentialing checklist: from first document to ongoing monitoring | AelfaCred",
+    "description": "A practical healthcare provider credentialing checklist covering provider data, primary source verification, payer enrollment, signatures and renewals.",
+    "keywords": [
+      "provider credentialing checklist",
+      "healthcare credentialing process",
+      "medical provider credentialing"
+    ],
+    "sections": 4,
+    "type": "Article"
+  },
+  {
+    "path": "/resources/credentialing-vs-payer-enrollment/",
+    "title": "Credentialing vs. payer enrollment: what healthcare teams need to know | AelfaCred",
+    "description": "Understand provider credentialing, payer enrollment and contracting, and learn how to coordinate each workflow without confusing application statuses.",
+    "keywords": [
+      "credentialing vs payer enrollment",
+      "provider enrollment services",
+      "insurance credentialing"
+    ],
+    "sections": 4,
+    "type": "Article"
+  },
+  {
+    "path": "/resources/caqh-attestation-management/",
+    "title": "CAQH attestation management: keep provider profiles current | AelfaCred",
+    "description": "Build a practical CAQH attestation workflow with current provider data, document checks, assigned owners, reminders and a clear completion record.",
+    "keywords": [
+      "CAQH attestation management",
+      "CAQH profile updates",
+      "provider data management"
+    ],
+    "sections": 4,
+    "type": "Article"
+  },
+  {
+    "path": "/resources/recredentialing-and-expiration-tracking/",
+    "title": "Recredentialing and credential expiration tracking: a proactive approach | AelfaCred",
+    "description": "Learn how to manage recredentialing, Medicare revalidation and credential expirations with separate deadlines, clear ownership and actionable reminders.",
+    "keywords": [
+      "provider recredentialing",
+      "credential expiration tracking",
+      "Medicare revalidation"
+    ],
+    "sections": 4,
+    "type": "Article"
+  },
+  {
+    "path": "/resources/credentialing-software-provider-onboarding/",
+    "title": "How credentialing software improves provider onboarding workflows | AelfaCred",
+    "description": "See how provider credentialing software connects data collection, application auto-fill, signatures, enrollment tracking and handoffs during onboarding.",
+    "keywords": [
+      "provider credentialing software",
+      "provider onboarding software",
+      "credentialing workflow automation"
+    ],
+    "sections": 4,
+    "type": "Article"
+  },
+  {
+    "path": "/resources/primary-source-verification/",
+    "title": "Primary source verification in healthcare credentialing: a practical guide | AelfaCred",
+    "description": "Understand primary source verification, how it differs from document collection, and how to organize verification evidence and resolve discrepancies.",
+    "keywords": [
+      "primary source verification",
+      "healthcare credential verification",
+      "provider credentialing services"
+    ],
+    "sections": 4,
+    "type": "Article"
+  },
+  {
+    "path": "/why-aelfacred/",
+    "title": "Why AelfaCred | Credentialing Software and Support",
+    "description": "Bring provider records, automatic form filling, license expiration tracking, application tasks, and credentialing support together with AelfaCred.",
+    "keywords": [
+      "why AelfaCred",
+      "credentialing software",
+      "provider credentialing workflow",
+      "license expiration tracking"
+    ],
+    "sections": 5,
+    "type": "WebPage"
+  }
+]

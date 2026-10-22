@@ -1,0 +1,45 @@
+/* Open pendant-lamp composition, scoped to the QWay visual on About. */
+.qway-pendant {width:100%;max-width:580px;min-width:0;margin:0 auto;background:none;border:0;box-shadow:none;}
+.pendant-scene {position:relative;isolation:isolate;height:405px;overflow:hidden;overflow:clip;}
+.pendant-fixture {position:absolute;top:0;left:50%;width:220px;height:160px;transform:translateX(-50%);z-index:3;pointer-events:none;}
+.pendant-beam {position:absolute;top:129px;left:0;width:100%;height:230px;z-index:0;pointer-events:none;}
+.pendant-logo-light {position:absolute;left:0;right:0;top:240px;height:110px;background:radial-gradient(ellipse 50% 48% at center,rgba(255,227,169,.18),rgba(255,223,158,.06) 52%,transparent 100%);pointer-events:none;}
+.qway-pendant .pendant-light {opacity:0;transition:opacity 550ms ease;}
+.qway-pendant[data-light="on"] .pendant-light {opacity:1;transition-duration:750ms;}
+.pendant-wordmark {position:absolute;left:5%;right:5%;top:282px;z-index:2;}
+.pendant-wordmark img {display:block;width:100%;height:auto;object-fit:contain;opacity:.78;filter:brightness(1.12);transition:opacity 700ms ease,filter 700ms ease;}
+.qway-pendant[data-light="on"] .pendant-wordmark img {opacity:1;filter:brightness(1.28) drop-shadow(0 1px 0 rgba(255,239,205,.2)) drop-shadow(0 0 18px rgba(255,218,150,.18));}
+.pendant-cord {
+  --pull:0px;position:absolute;top:132px;left:calc(50% + 40px);z-index:4;
+  display:block;width:44px;height:calc(112px + var(--pull));padding:0;border:0;border-radius:0;
+  background:transparent;box-shadow:none;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;
+  transition:height 450ms cubic-bezier(.22,1.35,.45,1);
+}
+.pendant-cord.is-pulling {cursor:grabbing;transition:none;}
+.pendant-rope {position:absolute;top:0;bottom:32px;left:21px;width:2px;background:repeating-linear-gradient(0deg,#b2a58a 0 3px,#e2d4b5 3px 5px);box-shadow:1px 0 0 rgba(0,0,0,.28);}
+.pendant-cord-grip {position:absolute;left:15px;bottom:9px;width:14px;height:25px;border-radius:7px;background:linear-gradient(90deg,#827256,#e2cfaa 48%,#ab9673);border:1px solid #c8b48d;box-shadow:0 3px 6px rgba(0,0,0,.22);}
+.pendant-cord:hover .pendant-cord-grip {border-color:#fff0cc;}
+.pendant-cord:focus-visible {outline:none;}
+.pendant-cord:focus-visible .pendant-cord-grip {outline:2px solid #b5d7ff;outline-offset:6px;}
+.pendant-instructions {position:absolute;bottom:12px;left:8px;right:8px;display:flex;justify-content:center;align-items:center;gap:10px;margin:0;color:#b8cbe3;font-size:13px;line-height:1.7;letter-spacing:.025em;}
+.pendant-instruction-icon {color:#d4bd91;font-size:18px;}
+.pendant-cord[hidden],.pendant-instructions[hidden] {display:none;}
+.pendant-caption {margin:14px 0 24px;color:#a6c6ee;text-align:center;font-size:12px;line-height:1.7;font-weight:500;letter-spacing:.13em;}
+.pendant-services {display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:18px;list-style:none;padding:0;margin:0 14px;}
+.pendant-services li {display:flex;flex-direction:column;gap:9px;border-top:1px solid #294563;padding-top:14px;color:#e1edff;font-size:16px;line-height:1.6;}
+.pendant-services li>span {color:#7ea6d8;font-size:11px;line-height:1.5;font-weight:500;letter-spacing:.12em;}
+@media(max-width:1100px) {.pendant-services {gap:12px;margin-inline:4px;}.pendant-services li {font-size:15px;}}
+@media(max-width:720px) {.qway-pendant {max-width:490px;}}
+@media(max-width:480px) {
+  .pendant-scene {height:380px;}
+  .pendant-wordmark {left:3%;right:3%;top:282px;}
+  .pendant-beam {height:220px;}
+  .pendant-logo-light {top:247px;height:90px;}
+  .pendant-caption {font-size:11px;letter-spacing:.09em;margin-top:12px;}
+  .pendant-services {gap:10px;}
+  .pendant-services li {font-size:14px;}
+  .pendant-instructions {font-size:12px;bottom:8px;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .qway-pendant[data-light] .pendant-light,.pendant-wordmark img,.pendant-cord {transition:none;}
+}
